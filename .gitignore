@@ -1,0 +1,14 @@
+t/
+backups/
+bin/
+data/
+doxygen/
+obj/
+changes.tmp
+ChangesLog.txt
+default.workspace
+default.workspace.layout
+logic.txt
+rgb.*
+segmenter.*
+version.h
