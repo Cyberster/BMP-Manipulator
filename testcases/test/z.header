@@ -1,0 +1,19 @@
+Filename: t/test/z.bmp
+==========================
+bfType: BM
+bfSize: 1458 bytes
+bfReserved1: 0
+bfReserved2: 0
+bfOffBits: 54
+biSize: 40 bytes
+biWidth: 17 pixels
+biHeight: 27 pixels
+biPlanes: 1
+biBitCount: 24 bit
+biCompression: 0
+biSizeImage: 1404 pixels
+biXPelsPerMeter: 3780 pixels
+biYPelsPerMeter: 3780 pixels
+biClrUsed: 0
+biClrImportant: 0
+junk bytes per row: 1

@@ -1,0 +1,491 @@
+.TH "BMP" 3 "Mon May 23 2016" "segmenter" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BMP \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBMP\fP ()"
+.br
+.ti -1c
+.RI "\fBBMP\fP (string fn)"
+.br
+.ti -1c
+.RI "void \fBreadHeader\fP ()"
+.br
+.ti -1c
+.RI "void \fBprintHeader\fP ()"
+.br
+.ti -1c
+.RI "void \fBexportHeader\fP ()"
+.br
+.ti -1c
+.RI "vector< vector< \fBRGB\fP > > \fBrotateBMP\fP (int degree, string fn=string())"
+.br
+.ti -1c
+.RI "void \fBrotateMatrix\fP (vector< vector< \fBRGB\fP > > &data2D, int degree)"
+.br
+.ti -1c
+.RI "void \fBexportHexColor\fP (string inFileName=string(), bool binarize=false, bool showOnScreen=false)"
+.br
+.ti -1c
+.RI "void \fBbmp2txt\fP (string fn=string(), bool showOnScreen=false)"
+.br
+.ti -1c
+.RI "vector< vector< \fBRGB\fP > > \fBhexColorReader\fP (string fn)"
+.br
+.ti -1c
+.RI "void \fBhex2bmp\fP (string inFileName, string outFileName)"
+.br
+.ti -1c
+.RI "vector< vector< \fBRGB\fP > > \fBgetBMPmatrix\fP (string fn=string())"
+.br
+.ti -1c
+.RI "void \fBgenerateSegments\fP (int threshold=220)"
+.br
+.ti -1c
+.RI "vector< string > \fBsegmentGenerator\fP (bool fetchHorizontal, int threshold, string fn=string())"
+.br
+.ti -1c
+.RI "vector< unsigned long int > \fBgenerateHistogram\fP (vector< vector< \fBRGB\fP > > data2D, string fn=string())"
+.br
+.ti -1c
+.RI "void \fBincreaseContrast\fP (vector< vector< \fBRGB\fP > > &data2D, int factor, int threshold)"
+.br
+.ti -1c
+.RI "vector< vector< \fBRGB\fP > > \fBmedianBlur\fP (vector< vector< \fBRGB\fP > > data2D, bool isColor, int kernelSize=7)"
+.br
+.ti -1c
+.RI "void \fBwriteAsBMP\fP (string outFileName, vector< vector< \fBRGB\fP > > data2D)"
+.br
+.ti -1c
+.RI "int * \fBdec2rbyte\fP (int x)"
+.br
+.ti -1c
+.RI "int \fBgetPadding\fP (int width)"
+.br
+.ti -1c
+.RI "unsigned int * \fBgetHeightWidthByFN\fP (string fn)"
+.br
+.ti -1c
+.RI "vector< vector< \fBRGB\fP > > \fBresizeBMP\fP (vector< vector< \fBRGB\fP > > data2D, int target_width, int target_height)"
+.br
+.ti -1c
+.RI "vector< vector< \fBRGB\fP > > \fBbinarizeBMP\fP (vector< vector< \fBRGB\fP > > data2D, int threshold, bool invert=false)"
+.br
+.ti -1c
+.RI "int \fBgetWhiteBoundery\fP (vector< vector< \fBRGB\fP > > data2D)"
+.br
+.ti -1c
+.RI "vector< vector< \fBRGB\fP > > \fBgetBiggestContour\fP (vector< vector< \fBRGB\fP > > data2D)"
+.br
+.ti -1c
+.RI "int \fBdetectDigit\fP (vector< vector< \fBRGB\fP > > data2D)"
+.br
+.ti -1c
+.RI "int \fBdetectNumber\fP (vector< vector< \fBRGB\fP > > data2D)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Holds a \fBBMP\fP image and manipulates 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BMP::BMP ()\fC [inline]\fP"
+Do nothing constructor 
+.SS "BMP::BMP (string fn)\fC [inline]\fP"
+One parameter constructor
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfn\fP an string argument\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "vector< vector<\fBRGB\fP> > BMP::binarizeBMP (vector< vector< \fBRGB\fP > > data2D, int threshold, bool invert = \fCfalse\fP)\fC [inline]\fP"
+Binarize a \fBBMP\fP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata2D\fP a vector< vector<RGB> > argument\&. 
+.br
+\fIthreshold\fP an int argument\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a vector< vector<RGB> > 
+.RE
+.PP
+
+.SS "void BMP::bmp2txt (string fn = \fCstring()\fP, bool showOnScreen = \fCfalse\fP)\fC [inline]\fP"
+binarize a bmp image
+.PP
+It is overloaded version of this method\&. Used methods: \fBexportHexColor()\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfn\fP an string argument, default is blank\&. 
+.br
+\fIshowOnScreen\fP an int argument, default is false\&. 
+.RE
+.PP
+
+.SS "int* BMP::dec2rbyte (int x)\fC [inline]\fP"
+Converts integer to 4 different file-writable byte array in reverse order
+.PP
+If fetchHorizontal is true then it fetch \fBBMP\fP image left to right else top to bottom i/p- 24, o/p- 18 00 00 00 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP an int argument\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a int * 
+.RE
+.PP
+
+.SS "int BMP::detectDigit (vector< vector< \fBRGB\fP > > data2D)\fC [inline]\fP"
+OCR on single digits
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata2D\fP a vector< vector<RGB> > argument\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+int 
+.RE
+.PP
+BUG: data2d already has a size\&. getBiggestContour(data2D) returns a different size Solution: create a new image instead of returning data
+.SS "int BMP::detectNumber (vector< vector< \fBRGB\fP > > data2D)\fC [inline]\fP"
+OCR on numbers i\&.e\&. multiple digits
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata2D\fP a vector< vector<RGB> > argument\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+int 
+.RE
+.PP
+
+.SS "void BMP::exportHeader ()\fC [inline]\fP"
+Prints 54 byte bmp header to screen and file 
+.SS "void BMP::exportHexColor (string inFileName = \fCstring()\fP, bool binarize = \fCfalse\fP, bool showOnScreen = \fCfalse\fP)\fC [inline]\fP"
+Exports hex colors to text file
+.PP
+When used alone, do not mention last two arguments \fBbmp2txt()\fP is overloaded version of this method\&. Used methods: \fBgetHeightWidthByFN()\fP, \fBgetPadding()\fP, \fBgetBMPmatrix()\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinFileName\fP an string argument, default is blank\&. 
+.br
+\fIbinarize\fP an int argument, default is false\&. 
+.br
+\fIshowOnScreen\fP an int argument, default is false\&. 
+.RE
+.PP
+sorting left to right, bottom to top 
+.SS "vector<unsigned long int> BMP::generateHistogram (vector< vector< \fBRGB\fP > > data2D, string fn = \fCstring()\fP)\fC [inline]\fP"
+Generate histogram of a \fBBMP\fP image (P5 PGM)
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata2D\fP an vector< vector<RGB> > argument\&. 
+.br
+\fIfn\fP an string argument, default is blank\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a vector<unsigned long int> 
+.RE
+.PP
+
+.SS "void BMP::generateSegments (int threshold = \fC220\fP)\fC [inline]\fP"
+Generates both line and word segment from \fBBMP\fP files
+.PP
+This method calls its sub method \fBsegmentGenerator()\fP and loop through received string array up to two level Used methods: \fBsegmentGenerator()\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIthreshold\fP an int argument, default is 225\&. 
+.RE
+.PP
+
+.SS "vector< vector<\fBRGB\fP> > BMP::getBiggestContour (vector< vector< \fBRGB\fP > > data2D)\fC [inline]\fP"
+Get the biggest contour from a \fBBMP\fP i\&.e\&. cropping out unnecessary white borders
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata2D\fP a vector< vector<RGB> > argument\&. 
+.br
+\fIthreshold\fP an int argument\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a vector< vector<RGB> > 
+.RE
+.PP
+
+.SS "vector< vector< \fBRGB\fP > > BMP::getBMPmatrix (string fn = \fCstring()\fP)\fC [inline]\fP"
+Reads color from \fBBMP\fP files and store them into 2D array
+.PP
+Used methods: \fBgetHeightWidthByFN()\fP, \fBgetPadding()\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfn\fP an string argument, default is blank\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a vector< vector<RGB> > 
+.RE
+.PP
+fetching and sorting left to right, bottom to top 
+.SS "unsigned int* BMP::getHeightWidthByFN (string fn)\fC [inline]\fP"
+Calculate the padding or junk byte values of \fBBMP\fP from width
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwidth\fP an int argument\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a int 
+.RE
+.PP
+
+.SS "int BMP::getPadding (int width)\fC [inline]\fP"
+Calculate the padding or junk byte values of \fBBMP\fP from width
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwidth\fP an int argument\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a int 
+.RE
+.PP
+
+.SS "int BMP::getWhiteBoundery (vector< vector< \fBRGB\fP > > data2D)\fC [inline]\fP"
+Get white boundary limits i\&.e\&. white border from a \fBBMP\fP image, helper method of getBiggestContour
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata2D\fP a vector< vector<RGB> > argument\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+an int 
+.RE
+.PP
+
+.SS "void BMP::hex2bmp (string inFileName, string outFileName)\fC [inline]\fP"
+Reads hex color files and write them into \fBBMP\fP files
+.PP
+reads color intensity \&.txt files and store them into vector those \&.txt file has white space as pixel and '
+.br
+' as line delimiter Used methods: \fBhexColorReader()\fP, \fBwriteAsBMP()\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinFileName\fP an string argument\&. 
+.br
+\fIoutFileName\fP an string argument\&. 
+.RE
+.PP
+
+.SS "vector< vector<\fBRGB\fP> > BMP::hexColorReader (string fn)\fC [inline]\fP"
+reads hex color files and store them into 2D array
+.PP
+reads color intensity \&.txt files and store them into vector Used methods: \fBgetHeightWidthByFN()\fP, \fBexportHexColor()\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfn\fP an string argument\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a vector< vector<RGB> > 
+.RE
+.PP
+
+.SS "void BMP::increaseContrast (vector< vector< \fBRGB\fP > > & data2D, int factor, int threshold)\fC [inline]\fP"
+Increase contrast of a \fBRGB\fP pixel matrix
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata2D\fP an vector< vector<RGB> >& argument\&. 
+.br
+\fIfactor\fP an int argument\&. 
+.br
+\fIthreshold\fP an int argument\&. 
+.RE
+.PP
+
+.SS "vector< vector<\fBRGB\fP> > BMP::medianBlur (vector< vector< \fBRGB\fP > > data2D, bool isColor, int kernelSize = \fC7\fP)\fC [inline]\fP"
+Apply median blur on a pixel matrix, it removes salt/paper noise
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata2D\fP an vector< vector<RGB> > argument, it should be odd\&. 
+.br
+\fIisColor\fP an int bool\&. 
+.br
+\fIkernelSize\fP an int argument, default is 7\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a vector< vector<RGB> > 
+.RE
+.PP
+
+.SS "void BMP::printHeader ()\fC [inline]\fP"
+Prints 54 byte bmp header to screen 
+.SS "void BMP::readHeader ()\fC [inline]\fP"
+Reads 54 byte bmp header bfType - 2 bytes
+.PP
+bfSize: - 4 bytes
+.PP
+bfReserved1: - 2 bytes
+.PP
+bfReserved2: - 2 bytes
+.PP
+bfOffBits: - 4 bytes
+.PP
+biSize: - 4 bytes
+.PP
+biWidth: - 4 bytes
+.PP
+biHeight: - 4 bytes
+.PP
+biPlanes: - 2 bytes
+.PP
+biBitCount: - 2 bytes
+.PP
+biCompression: - 4 bytes
+.PP
+biSizeImage: - 4 bytes
+.PP
+biXPelsPerMeter: - 4 bytes
+.PP
+biYPelsPerMeter: - 4 bytes
+.PP
+biClrUsed: - 4 bytes
+.PP
+biClrImportant: - 4 bytes
+.PP
+calculating padding value 
+.SS "vector< vector<\fBRGB\fP> > BMP::resizeBMP (vector< vector< \fBRGB\fP > > data2D, int target_width, int target_height)\fC [inline]\fP"
+Resized a \fBBMP\fP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata2D\fP a vector< vector<RGB> > argument\&. 
+.br
+\fItarget_width\fP an int argument\&. 
+.br
+\fItarget_height\fP an int argument\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a vector< vector<RGB> > 
+.RE
+.PP
+
+.SS "vector< vector<\fBRGB\fP> > BMP::rotateBMP (int degree, string fn = \fCstring()\fP)\fC [inline]\fP"
+Rotates a bmp image by 90, 180 and 270 degrees clockwise
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdegree\fP an int argument\&. 
+.br
+\fIfn\fP an string argument, default = blank\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a vector< vector<RGB> > 
+.RE
+.PP
+writing to new \fBBMP\fP 
+.SS "void BMP::rotateMatrix (vector< vector< \fBRGB\fP > > & data2D, int degree)\fC [inline]\fP"
+Rotates a 2d matrix/array by 90, 180 and 270 degrees clockwise
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata2D\fP an vector< vector< RGB > > reference argument\&. 
+.br
+\fIdegree\fP an int argument\&. 
+.RE
+.PP
+
+.SS "vector<string> BMP::segmentGenerator (bool fetchHorizontal, int threshold, string fn = \fCstring()\fP)\fC [inline]\fP"
+Generates only line or word segment from \fBBMP\fP files depends on condition
+.PP
+If fetchHorizontal is true then it fetch \fBBMP\fP image left to right else top to bottom i\&.e\&. fetchHorizontal = true means line segment else word segment\&. Used methods: \fBwriteAsBMP()\fP\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfetchHorizontal\fP an bool argument\&. 
+.br
+\fIthreshold\fP an int argument\&. 
+.br
+\fIfn\fP an string argument, default is blank\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a vector<string> 
+.RE
+.PP
+writing to new \fBBMP\fP 
+.SS "void BMP::writeAsBMP (string outFileName, vector< vector< \fBRGB\fP > > data2D)\fC [inline]\fP"
+Writes/generates new \fBBMP\fP file from 2D array of pixel colors
+.PP
+\fBParameters:\fP
+.RS 4
+\fIoutFileName\fP an string argument\&. 
+.br
+\fIdata2D\fP an vector< vector<RGB> > argument\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a int 
+.RE
+.PP
+preparing header
+.PP
+generating new header and write to file
+.PP
+writing pixel data
+.PP
+sorting left to right, bottom to top 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for segmenter from the source code\&.

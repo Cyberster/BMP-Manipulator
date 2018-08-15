@@ -1,0 +1,564 @@
+\hypertarget{class_b_m_p}{}\section{B\+MP Class Reference}
+\label{class_b_m_p}\index{B\+MP@{B\+MP}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_b_m_p_a4876e9c343e660f4fff12d223da8f172}{B\+MP} ()
+\item 
+\hyperlink{class_b_m_p_af57a7e5bacdcec42034e14b77da799fb}{B\+MP} (string fn)
+\item 
+void \hyperlink{class_b_m_p_a73c98c805db05cfb66066193c5695bc2}{read\+Header} ()
+\item 
+void \hyperlink{class_b_m_p_aa61c050a8592256dfd89b663c2da5498}{print\+Header} ()
+\item 
+void \hyperlink{class_b_m_p_ae099cf277a98042eadb950528b4fe230}{export\+Header} ()
+\item 
+vector$<$ vector$<$ \hyperlink{class_r_g_b}{R\+GB} $>$ $>$ \hyperlink{class_b_m_p_a3a54abff00eb91176cc5a6cebf1dc986}{rotate\+B\+MP} (int degree, string fn=string())
+\item 
+void \hyperlink{class_b_m_p_a0303cc2b3dcf6164fc97ff479fecb256}{rotate\+Matrix} (vector$<$ vector$<$ \hyperlink{class_r_g_b}{R\+GB} $>$ $>$ \&data2D, int degree)
+\item 
+void \hyperlink{class_b_m_p_a9e3f6b1337e87cc82f492d4adb37a38e}{export\+Hex\+Color} (string in\+File\+Name=string(), bool binarize=false, bool show\+On\+Screen=false)
+\item 
+void \hyperlink{class_b_m_p_a323b6fc36c025c9977fc86a34f8205da}{bmp2txt} (string fn=string(), bool show\+On\+Screen=false)
+\item 
+vector$<$ vector$<$ \hyperlink{class_r_g_b}{R\+GB} $>$ $>$ \hyperlink{class_b_m_p_a34a823512edc76be1c1a3ebd8fcbda6c}{hex\+Color\+Reader} (string fn)
+\item 
+void \hyperlink{class_b_m_p_a76ec886153ad936381858fd3f68b26b0}{hex2bmp} (string in\+File\+Name, string out\+File\+Name)
+\item 
+vector$<$ vector$<$ \hyperlink{class_r_g_b}{R\+GB} $>$ $>$ \hyperlink{class_b_m_p_add1babaab910512574cc16a01f115b0b}{get\+B\+M\+Pmatrix} (string fn=string())
+\item 
+void \hyperlink{class_b_m_p_a36ad6a7f4f9036dddd1f7adadf32d12e}{generate\+Segments} (int threshold=220)
+\item 
+vector$<$ string $>$ \hyperlink{class_b_m_p_ae6489ffa6e4f5054d0f79c0060a5ce5e}{segment\+Generator} (bool fetch\+Horizontal, int threshold, string fn=string())
+\item 
+vector$<$ unsigned long int $>$ \hyperlink{class_b_m_p_abfba756268553a144e4d438cf08cfd88}{generate\+Histogram} (vector$<$ vector$<$ \hyperlink{class_r_g_b}{R\+GB} $>$ $>$ data2D, string fn=string())
+\item 
+void \hyperlink{class_b_m_p_a29b13b8d85e3db52f410c2bc54e22c87}{increase\+Contrast} (vector$<$ vector$<$ \hyperlink{class_r_g_b}{R\+GB} $>$ $>$ \&data2D, int factor, int threshold)
+\item 
+vector$<$ vector$<$ \hyperlink{class_r_g_b}{R\+GB} $>$ $>$ \hyperlink{class_b_m_p_a6c6d8ef070464b74d054f39d6b435247}{median\+Blur} (vector$<$ vector$<$ \hyperlink{class_r_g_b}{R\+GB} $>$ $>$ data2D, bool is\+Color, int kernel\+Size=7)
+\item 
+void \hyperlink{class_b_m_p_aa9269f0d792e39faed57347394d530ee}{write\+As\+B\+MP} (string out\+File\+Name, vector$<$ vector$<$ \hyperlink{class_r_g_b}{R\+GB} $>$ $>$ data2D)
+\item 
+int $\ast$ \hyperlink{class_b_m_p_a9c1b98bda85628da0f3bbafdbcd097cb}{dec2rbyte} (int x)
+\item 
+int \hyperlink{class_b_m_p_ad7557c0db332d88d72e447d7d09db40f}{get\+Padding} (int width)
+\item 
+unsigned int $\ast$ \hyperlink{class_b_m_p_a12db9e6e65cf96c976f572310b500e12}{get\+Height\+Width\+By\+FN} (string fn)
+\item 
+vector$<$ vector$<$ \hyperlink{class_r_g_b}{R\+GB} $>$ $>$ \hyperlink{class_b_m_p_a685e5a78e475fcfc845c08650b3ae54d}{resize\+B\+MP} (vector$<$ vector$<$ \hyperlink{class_r_g_b}{R\+GB} $>$ $>$ data2D, int target\+\_\+width, int target\+\_\+height)
+\item 
+vector$<$ vector$<$ \hyperlink{class_r_g_b}{R\+GB} $>$ $>$ \hyperlink{class_b_m_p_a06087ef29abfac7f68d8afaa4cbaec81}{binarize\+B\+MP} (vector$<$ vector$<$ \hyperlink{class_r_g_b}{R\+GB} $>$ $>$ data2D, int threshold, bool invert=false)
+\item 
+int \hyperlink{class_b_m_p_ab6913a6a4590e85617e5dae596b703fd}{get\+White\+Boundery} (vector$<$ vector$<$ \hyperlink{class_r_g_b}{R\+GB} $>$ $>$ data2D)
+\item 
+vector$<$ vector$<$ \hyperlink{class_r_g_b}{R\+GB} $>$ $>$ \hyperlink{class_b_m_p_a9effe0ed9f879248f6084cfea74095ae}{get\+Biggest\+Contour} (vector$<$ vector$<$ \hyperlink{class_r_g_b}{R\+GB} $>$ $>$ data2D)
+\item 
+int \hyperlink{class_b_m_p_a0fdda9df1614f44bee93d2e4ca6e37c2}{detect\+Digit} (vector$<$ vector$<$ \hyperlink{class_r_g_b}{R\+GB} $>$ $>$ data2D)
+\item 
+int \hyperlink{class_b_m_p_ad08fcac55ed0ffd703208921e1d47804}{detect\+Number} (vector$<$ vector$<$ \hyperlink{class_r_g_b}{R\+GB} $>$ $>$ data2D)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Holds a \hyperlink{class_b_m_p}{B\+MP} image and manipulates 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{B\+MP@{B\+MP}!B\+MP@{B\+MP}}
+\index{B\+MP@{B\+MP}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{B\+M\+P()}{BMP()}}]{\setlength{\rightskip}{0pt plus 5cm}B\+M\+P\+::\+B\+MP (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_a4876e9c343e660f4fff12d223da8f172}{}\label{class_b_m_p_a4876e9c343e660f4fff12d223da8f172}
+Do nothing constructor \index{B\+MP@{B\+MP}!B\+MP@{B\+MP}}
+\index{B\+MP@{B\+MP}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{B\+M\+P(string fn)}{BMP(string fn)}}]{\setlength{\rightskip}{0pt plus 5cm}B\+M\+P\+::\+B\+MP (
+\begin{DoxyParamCaption}
+\item[{string}]{fn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_af57a7e5bacdcec42034e14b77da799fb}{}\label{class_b_m_p_af57a7e5bacdcec42034e14b77da799fb}
+One parameter constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em fn} & an string argument. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{B\+MP@{B\+MP}!binarize\+B\+MP@{binarize\+B\+MP}}
+\index{binarize\+B\+MP@{binarize\+B\+MP}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{binarize\+B\+M\+P(vector$<$ vector$<$ R\+G\+B $>$ $>$ data2\+D, int threshold, bool invert=false)}{binarizeBMP(vector< vector< RGB > > data2D, int threshold, bool invert=false)}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ vector$<${\bf R\+GB}$>$ $>$ B\+M\+P\+::binarize\+B\+MP (
+\begin{DoxyParamCaption}
+\item[{vector$<$ vector$<$ {\bf R\+GB} $>$ $>$}]{data2D, }
+\item[{int}]{threshold, }
+\item[{bool}]{invert = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_a06087ef29abfac7f68d8afaa4cbaec81}{}\label{class_b_m_p_a06087ef29abfac7f68d8afaa4cbaec81}
+Binarize a \hyperlink{class_b_m_p}{B\+MP}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data2D} & a vector$<$ vector$<$\+R\+G\+B$>$ $>$ argument. \\
+\hline
+{\em threshold} & an int argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector$<$ vector$<$\+R\+G\+B$>$ $>$ 
+\end{DoxyReturn}
+\index{B\+MP@{B\+MP}!bmp2txt@{bmp2txt}}
+\index{bmp2txt@{bmp2txt}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{bmp2txt(string fn=string(), bool show\+On\+Screen=false)}{bmp2txt(string fn=string(), bool showOnScreen=false)}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+M\+P\+::bmp2txt (
+\begin{DoxyParamCaption}
+\item[{string}]{fn = {\ttfamily string()}, }
+\item[{bool}]{show\+On\+Screen = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_a323b6fc36c025c9977fc86a34f8205da}{}\label{class_b_m_p_a323b6fc36c025c9977fc86a34f8205da}
+binarize a bmp image
+
+It is overloaded version of this method. Used methods\+: \hyperlink{class_b_m_p_a9e3f6b1337e87cc82f492d4adb37a38e}{export\+Hex\+Color()}. 
+\begin{DoxyParams}{Parameters}
+{\em fn} & an string argument, default is blank. \\
+\hline
+{\em show\+On\+Screen} & an int argument, default is false. \\
+\hline
+\end{DoxyParams}
+\index{B\+MP@{B\+MP}!dec2rbyte@{dec2rbyte}}
+\index{dec2rbyte@{dec2rbyte}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{dec2rbyte(int x)}{dec2rbyte(int x)}}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ B\+M\+P\+::dec2rbyte (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_a9c1b98bda85628da0f3bbafdbcd097cb}{}\label{class_b_m_p_a9c1b98bda85628da0f3bbafdbcd097cb}
+Converts integer to 4 different file-\/writable byte array in reverse order
+
+If fetch\+Horizontal is true then it fetch \hyperlink{class_b_m_p}{B\+MP} image left to right else top to bottom i/p-\/ 24, o/p-\/ 18 00 00 00 
+\begin{DoxyParams}{Parameters}
+{\em x} & an int argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a int $\ast$ 
+\end{DoxyReturn}
+\index{B\+MP@{B\+MP}!detect\+Digit@{detect\+Digit}}
+\index{detect\+Digit@{detect\+Digit}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{detect\+Digit(vector$<$ vector$<$ R\+G\+B $>$ $>$ data2\+D)}{detectDigit(vector< vector< RGB > > data2D)}}]{\setlength{\rightskip}{0pt plus 5cm}int B\+M\+P\+::detect\+Digit (
+\begin{DoxyParamCaption}
+\item[{vector$<$ vector$<$ {\bf R\+GB} $>$ $>$}]{data2D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_a0fdda9df1614f44bee93d2e4ca6e37c2}{}\label{class_b_m_p_a0fdda9df1614f44bee93d2e4ca6e37c2}
+O\+CR on single digits
+
+
+\begin{DoxyParams}{Parameters}
+{\em data2D} & a vector$<$ vector$<$\+R\+G\+B$>$ $>$ argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+B\+UG\+: data2d already has a size. get\+Biggest\+Contour(data2\+D) returns a different size Solution\+: create a new image instead of returning data\index{B\+MP@{B\+MP}!detect\+Number@{detect\+Number}}
+\index{detect\+Number@{detect\+Number}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{detect\+Number(vector$<$ vector$<$ R\+G\+B $>$ $>$ data2\+D)}{detectNumber(vector< vector< RGB > > data2D)}}]{\setlength{\rightskip}{0pt plus 5cm}int B\+M\+P\+::detect\+Number (
+\begin{DoxyParamCaption}
+\item[{vector$<$ vector$<$ {\bf R\+GB} $>$ $>$}]{data2D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_ad08fcac55ed0ffd703208921e1d47804}{}\label{class_b_m_p_ad08fcac55ed0ffd703208921e1d47804}
+O\+CR on numbers i.\+e. multiple digits
+
+
+\begin{DoxyParams}{Parameters}
+{\em data2D} & a vector$<$ vector$<$\+R\+G\+B$>$ $>$ argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\index{B\+MP@{B\+MP}!export\+Header@{export\+Header}}
+\index{export\+Header@{export\+Header}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{export\+Header()}{exportHeader()}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+M\+P\+::export\+Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_ae099cf277a98042eadb950528b4fe230}{}\label{class_b_m_p_ae099cf277a98042eadb950528b4fe230}
+Prints 54 byte bmp header to screen and file \index{B\+MP@{B\+MP}!export\+Hex\+Color@{export\+Hex\+Color}}
+\index{export\+Hex\+Color@{export\+Hex\+Color}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{export\+Hex\+Color(string in\+File\+Name=string(), bool binarize=false, bool show\+On\+Screen=false)}{exportHexColor(string inFileName=string(), bool binarize=false, bool showOnScreen=false)}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+M\+P\+::export\+Hex\+Color (
+\begin{DoxyParamCaption}
+\item[{string}]{in\+File\+Name = {\ttfamily string()}, }
+\item[{bool}]{binarize = {\ttfamily false}, }
+\item[{bool}]{show\+On\+Screen = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_a9e3f6b1337e87cc82f492d4adb37a38e}{}\label{class_b_m_p_a9e3f6b1337e87cc82f492d4adb37a38e}
+Exports hex colors to text file
+
+When used alone, do not mention last two arguments \hyperlink{class_b_m_p_a323b6fc36c025c9977fc86a34f8205da}{bmp2txt()} is overloaded version of this method. Used methods\+: \hyperlink{class_b_m_p_a12db9e6e65cf96c976f572310b500e12}{get\+Height\+Width\+By\+F\+N()}, \hyperlink{class_b_m_p_ad7557c0db332d88d72e447d7d09db40f}{get\+Padding()}, \hyperlink{class_b_m_p_add1babaab910512574cc16a01f115b0b}{get\+B\+M\+Pmatrix()}. 
+\begin{DoxyParams}{Parameters}
+{\em in\+File\+Name} & an string argument, default is blank. \\
+\hline
+{\em binarize} & an int argument, default is false. \\
+\hline
+{\em show\+On\+Screen} & an int argument, default is false. \\
+\hline
+\end{DoxyParams}
+sorting left to right, bottom to top \index{B\+MP@{B\+MP}!generate\+Histogram@{generate\+Histogram}}
+\index{generate\+Histogram@{generate\+Histogram}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{generate\+Histogram(vector$<$ vector$<$ R\+G\+B $>$ $>$ data2\+D, string fn=string())}{generateHistogram(vector< vector< RGB > > data2D, string fn=string())}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$unsigned long int$>$ B\+M\+P\+::generate\+Histogram (
+\begin{DoxyParamCaption}
+\item[{vector$<$ vector$<$ {\bf R\+GB} $>$ $>$}]{data2D, }
+\item[{string}]{fn = {\ttfamily string()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_abfba756268553a144e4d438cf08cfd88}{}\label{class_b_m_p_abfba756268553a144e4d438cf08cfd88}
+Generate histogram of a \hyperlink{class_b_m_p}{B\+MP} image (P5 P\+GM)
+
+
+\begin{DoxyParams}{Parameters}
+{\em data2D} & an vector$<$ vector$<$\+R\+G\+B$>$ $>$ argument. \\
+\hline
+{\em fn} & an string argument, default is blank. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector$<$unsigned long int$>$ 
+\end{DoxyReturn}
+\index{B\+MP@{B\+MP}!generate\+Segments@{generate\+Segments}}
+\index{generate\+Segments@{generate\+Segments}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{generate\+Segments(int threshold=220)}{generateSegments(int threshold=220)}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+M\+P\+::generate\+Segments (
+\begin{DoxyParamCaption}
+\item[{int}]{threshold = {\ttfamily 220}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_a36ad6a7f4f9036dddd1f7adadf32d12e}{}\label{class_b_m_p_a36ad6a7f4f9036dddd1f7adadf32d12e}
+Generates both line and word segment from \hyperlink{class_b_m_p}{B\+MP} files
+
+This method calls its sub method \hyperlink{class_b_m_p_ae6489ffa6e4f5054d0f79c0060a5ce5e}{segment\+Generator()} and loop through received string array up to two level Used methods\+: \hyperlink{class_b_m_p_ae6489ffa6e4f5054d0f79c0060a5ce5e}{segment\+Generator()}. 
+\begin{DoxyParams}{Parameters}
+{\em threshold} & an int argument, default is 225. \\
+\hline
+\end{DoxyParams}
+\index{B\+MP@{B\+MP}!get\+Biggest\+Contour@{get\+Biggest\+Contour}}
+\index{get\+Biggest\+Contour@{get\+Biggest\+Contour}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{get\+Biggest\+Contour(vector$<$ vector$<$ R\+G\+B $>$ $>$ data2\+D)}{getBiggestContour(vector< vector< RGB > > data2D)}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ vector$<${\bf R\+GB}$>$ $>$ B\+M\+P\+::get\+Biggest\+Contour (
+\begin{DoxyParamCaption}
+\item[{vector$<$ vector$<$ {\bf R\+GB} $>$ $>$}]{data2D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_a9effe0ed9f879248f6084cfea74095ae}{}\label{class_b_m_p_a9effe0ed9f879248f6084cfea74095ae}
+Get the biggest contour from a \hyperlink{class_b_m_p}{B\+MP} i.\+e. cropping out unnecessary white borders
+
+
+\begin{DoxyParams}{Parameters}
+{\em data2D} & a vector$<$ vector$<$\+R\+G\+B$>$ $>$ argument. \\
+\hline
+{\em threshold} & an int argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector$<$ vector$<$\+R\+G\+B$>$ $>$ 
+\end{DoxyReturn}
+\index{B\+MP@{B\+MP}!get\+B\+M\+Pmatrix@{get\+B\+M\+Pmatrix}}
+\index{get\+B\+M\+Pmatrix@{get\+B\+M\+Pmatrix}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{get\+B\+M\+Pmatrix(string fn=string())}{getBMPmatrix(string fn=string())}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ vector$<$ {\bf R\+GB} $>$ $>$ B\+M\+P\+::get\+B\+M\+Pmatrix (
+\begin{DoxyParamCaption}
+\item[{string}]{fn = {\ttfamily string()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_add1babaab910512574cc16a01f115b0b}{}\label{class_b_m_p_add1babaab910512574cc16a01f115b0b}
+Reads color from \hyperlink{class_b_m_p}{B\+MP} files and store them into 2D array
+
+Used methods\+: \hyperlink{class_b_m_p_a12db9e6e65cf96c976f572310b500e12}{get\+Height\+Width\+By\+F\+N()}, \hyperlink{class_b_m_p_ad7557c0db332d88d72e447d7d09db40f}{get\+Padding()}. 
+\begin{DoxyParams}{Parameters}
+{\em fn} & an string argument, default is blank. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector$<$ vector$<$\+R\+G\+B$>$ $>$ 
+\end{DoxyReturn}
+fetching and sorting left to right, bottom to top \index{B\+MP@{B\+MP}!get\+Height\+Width\+By\+FN@{get\+Height\+Width\+By\+FN}}
+\index{get\+Height\+Width\+By\+FN@{get\+Height\+Width\+By\+FN}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{get\+Height\+Width\+By\+F\+N(string fn)}{getHeightWidthByFN(string fn)}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int$\ast$ B\+M\+P\+::get\+Height\+Width\+By\+FN (
+\begin{DoxyParamCaption}
+\item[{string}]{fn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_a12db9e6e65cf96c976f572310b500e12}{}\label{class_b_m_p_a12db9e6e65cf96c976f572310b500e12}
+Calculate the padding or junk byte values of \hyperlink{class_b_m_p}{B\+MP} from width
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & an int argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a int 
+\end{DoxyReturn}
+\index{B\+MP@{B\+MP}!get\+Padding@{get\+Padding}}
+\index{get\+Padding@{get\+Padding}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{get\+Padding(int width)}{getPadding(int width)}}]{\setlength{\rightskip}{0pt plus 5cm}int B\+M\+P\+::get\+Padding (
+\begin{DoxyParamCaption}
+\item[{int}]{width}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_ad7557c0db332d88d72e447d7d09db40f}{}\label{class_b_m_p_ad7557c0db332d88d72e447d7d09db40f}
+Calculate the padding or junk byte values of \hyperlink{class_b_m_p}{B\+MP} from width
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & an int argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a int 
+\end{DoxyReturn}
+\index{B\+MP@{B\+MP}!get\+White\+Boundery@{get\+White\+Boundery}}
+\index{get\+White\+Boundery@{get\+White\+Boundery}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{get\+White\+Boundery(vector$<$ vector$<$ R\+G\+B $>$ $>$ data2\+D)}{getWhiteBoundery(vector< vector< RGB > > data2D)}}]{\setlength{\rightskip}{0pt plus 5cm}int B\+M\+P\+::get\+White\+Boundery (
+\begin{DoxyParamCaption}
+\item[{vector$<$ vector$<$ {\bf R\+GB} $>$ $>$}]{data2D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_ab6913a6a4590e85617e5dae596b703fd}{}\label{class_b_m_p_ab6913a6a4590e85617e5dae596b703fd}
+Get white boundary limits i.\+e. white border from a \hyperlink{class_b_m_p}{B\+MP} image, helper method of get\+Biggest\+Contour
+
+
+\begin{DoxyParams}{Parameters}
+{\em data2D} & a vector$<$ vector$<$\+R\+G\+B$>$ $>$ argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an int 
+\end{DoxyReturn}
+\index{B\+MP@{B\+MP}!hex2bmp@{hex2bmp}}
+\index{hex2bmp@{hex2bmp}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{hex2bmp(string in\+File\+Name, string out\+File\+Name)}{hex2bmp(string inFileName, string outFileName)}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+M\+P\+::hex2bmp (
+\begin{DoxyParamCaption}
+\item[{string}]{in\+File\+Name, }
+\item[{string}]{out\+File\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_a76ec886153ad936381858fd3f68b26b0}{}\label{class_b_m_p_a76ec886153ad936381858fd3f68b26b0}
+Reads hex color files and write them into \hyperlink{class_b_m_p}{B\+MP} files
+
+reads color intensity .txt files and store them into vector those .txt file has white space as pixel and \textquotesingle{}~\newline
+\textquotesingle{} as line delimiter Used methods\+: \hyperlink{class_b_m_p_a34a823512edc76be1c1a3ebd8fcbda6c}{hex\+Color\+Reader()}, \hyperlink{class_b_m_p_aa9269f0d792e39faed57347394d530ee}{write\+As\+B\+M\+P()}. 
+\begin{DoxyParams}{Parameters}
+{\em in\+File\+Name} & an string argument. \\
+\hline
+{\em out\+File\+Name} & an string argument. \\
+\hline
+\end{DoxyParams}
+\index{B\+MP@{B\+MP}!hex\+Color\+Reader@{hex\+Color\+Reader}}
+\index{hex\+Color\+Reader@{hex\+Color\+Reader}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{hex\+Color\+Reader(string fn)}{hexColorReader(string fn)}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ vector$<${\bf R\+GB}$>$ $>$ B\+M\+P\+::hex\+Color\+Reader (
+\begin{DoxyParamCaption}
+\item[{string}]{fn}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_a34a823512edc76be1c1a3ebd8fcbda6c}{}\label{class_b_m_p_a34a823512edc76be1c1a3ebd8fcbda6c}
+reads hex color files and store them into 2D array
+
+reads color intensity .txt files and store them into vector Used methods\+: \hyperlink{class_b_m_p_a12db9e6e65cf96c976f572310b500e12}{get\+Height\+Width\+By\+F\+N()}, \hyperlink{class_b_m_p_a9e3f6b1337e87cc82f492d4adb37a38e}{export\+Hex\+Color()}. 
+\begin{DoxyParams}{Parameters}
+{\em fn} & an string argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector$<$ vector$<$\+R\+G\+B$>$ $>$ 
+\end{DoxyReturn}
+\index{B\+MP@{B\+MP}!increase\+Contrast@{increase\+Contrast}}
+\index{increase\+Contrast@{increase\+Contrast}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{increase\+Contrast(vector$<$ vector$<$ R\+G\+B $>$ $>$ \&data2\+D, int factor, int threshold)}{increaseContrast(vector< vector< RGB > > &data2D, int factor, int threshold)}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+M\+P\+::increase\+Contrast (
+\begin{DoxyParamCaption}
+\item[{vector$<$ vector$<$ {\bf R\+GB} $>$ $>$ \&}]{data2D, }
+\item[{int}]{factor, }
+\item[{int}]{threshold}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_a29b13b8d85e3db52f410c2bc54e22c87}{}\label{class_b_m_p_a29b13b8d85e3db52f410c2bc54e22c87}
+Increase contrast of a \hyperlink{class_r_g_b}{R\+GB} pixel matrix
+
+
+\begin{DoxyParams}{Parameters}
+{\em data2D} & an vector$<$ vector$<$\+R\+G\+B$>$ $>$\& argument. \\
+\hline
+{\em factor} & an int argument. \\
+\hline
+{\em threshold} & an int argument. \\
+\hline
+\end{DoxyParams}
+\index{B\+MP@{B\+MP}!median\+Blur@{median\+Blur}}
+\index{median\+Blur@{median\+Blur}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{median\+Blur(vector$<$ vector$<$ R\+G\+B $>$ $>$ data2\+D, bool is\+Color, int kernel\+Size=7)}{medianBlur(vector< vector< RGB > > data2D, bool isColor, int kernelSize=7)}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ vector$<${\bf R\+GB}$>$ $>$ B\+M\+P\+::median\+Blur (
+\begin{DoxyParamCaption}
+\item[{vector$<$ vector$<$ {\bf R\+GB} $>$ $>$}]{data2D, }
+\item[{bool}]{is\+Color, }
+\item[{int}]{kernel\+Size = {\ttfamily 7}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_a6c6d8ef070464b74d054f39d6b435247}{}\label{class_b_m_p_a6c6d8ef070464b74d054f39d6b435247}
+Apply median blur on a pixel matrix, it removes salt/paper noise
+
+
+\begin{DoxyParams}{Parameters}
+{\em data2D} & an vector$<$ vector$<$\+R\+G\+B$>$ $>$ argument, it should be odd. \\
+\hline
+{\em is\+Color} & an int bool. \\
+\hline
+{\em kernel\+Size} & an int argument, default is 7. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector$<$ vector$<$\+R\+G\+B$>$ $>$ 
+\end{DoxyReturn}
+\index{B\+MP@{B\+MP}!print\+Header@{print\+Header}}
+\index{print\+Header@{print\+Header}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{print\+Header()}{printHeader()}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+M\+P\+::print\+Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_aa61c050a8592256dfd89b663c2da5498}{}\label{class_b_m_p_aa61c050a8592256dfd89b663c2da5498}
+Prints 54 byte bmp header to screen \index{B\+MP@{B\+MP}!read\+Header@{read\+Header}}
+\index{read\+Header@{read\+Header}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{read\+Header()}{readHeader()}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+M\+P\+::read\+Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_a73c98c805db05cfb66066193c5695bc2}{}\label{class_b_m_p_a73c98c805db05cfb66066193c5695bc2}
+Reads 54 byte bmp header bf\+Type -\/ 2 bytes
+
+bf\+Size\+: -\/ 4 bytes
+
+bf\+Reserved1\+: -\/ 2 bytes
+
+bf\+Reserved2\+: -\/ 2 bytes
+
+bf\+Off\+Bits\+: -\/ 4 bytes
+
+bi\+Size\+: -\/ 4 bytes
+
+bi\+Width\+: -\/ 4 bytes
+
+bi\+Height\+: -\/ 4 bytes
+
+bi\+Planes\+: -\/ 2 bytes
+
+bi\+Bit\+Count\+: -\/ 2 bytes
+
+bi\+Compression\+: -\/ 4 bytes
+
+bi\+Size\+Image\+: -\/ 4 bytes
+
+bi\+X\+Pels\+Per\+Meter\+: -\/ 4 bytes
+
+bi\+Y\+Pels\+Per\+Meter\+: -\/ 4 bytes
+
+bi\+Clr\+Used\+: -\/ 4 bytes
+
+bi\+Clr\+Important\+: -\/ 4 bytes
+
+calculating padding value \index{B\+MP@{B\+MP}!resize\+B\+MP@{resize\+B\+MP}}
+\index{resize\+B\+MP@{resize\+B\+MP}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{resize\+B\+M\+P(vector$<$ vector$<$ R\+G\+B $>$ $>$ data2\+D, int target\+\_\+width, int target\+\_\+height)}{resizeBMP(vector< vector< RGB > > data2D, int target_width, int target_height)}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ vector$<${\bf R\+GB}$>$ $>$ B\+M\+P\+::resize\+B\+MP (
+\begin{DoxyParamCaption}
+\item[{vector$<$ vector$<$ {\bf R\+GB} $>$ $>$}]{data2D, }
+\item[{int}]{target\+\_\+width, }
+\item[{int}]{target\+\_\+height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_a685e5a78e475fcfc845c08650b3ae54d}{}\label{class_b_m_p_a685e5a78e475fcfc845c08650b3ae54d}
+Resized a \hyperlink{class_b_m_p}{B\+MP}
+
+
+\begin{DoxyParams}{Parameters}
+{\em data2D} & a vector$<$ vector$<$\+R\+G\+B$>$ $>$ argument. \\
+\hline
+{\em target\+\_\+width} & an int argument. \\
+\hline
+{\em target\+\_\+height} & an int argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector$<$ vector$<$\+R\+G\+B$>$ $>$ 
+\end{DoxyReturn}
+\index{B\+MP@{B\+MP}!rotate\+B\+MP@{rotate\+B\+MP}}
+\index{rotate\+B\+MP@{rotate\+B\+MP}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{rotate\+B\+M\+P(int degree, string fn=string())}{rotateBMP(int degree, string fn=string())}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ vector$<${\bf R\+GB}$>$ $>$ B\+M\+P\+::rotate\+B\+MP (
+\begin{DoxyParamCaption}
+\item[{int}]{degree, }
+\item[{string}]{fn = {\ttfamily string()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_a3a54abff00eb91176cc5a6cebf1dc986}{}\label{class_b_m_p_a3a54abff00eb91176cc5a6cebf1dc986}
+Rotates a bmp image by 90, 180 and 270 degrees clockwise
+
+
+\begin{DoxyParams}{Parameters}
+{\em degree} & an int argument. \\
+\hline
+{\em fn} & an string argument, default = blank. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector$<$ vector$<$\+R\+G\+B$>$ $>$ 
+\end{DoxyReturn}
+writing to new \hyperlink{class_b_m_p}{B\+MP} \index{B\+MP@{B\+MP}!rotate\+Matrix@{rotate\+Matrix}}
+\index{rotate\+Matrix@{rotate\+Matrix}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{rotate\+Matrix(vector$<$ vector$<$ R\+G\+B $>$ $>$ \&data2\+D, int degree)}{rotateMatrix(vector< vector< RGB > > &data2D, int degree)}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+M\+P\+::rotate\+Matrix (
+\begin{DoxyParamCaption}
+\item[{vector$<$ vector$<$ {\bf R\+GB} $>$ $>$ \&}]{data2D, }
+\item[{int}]{degree}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_a0303cc2b3dcf6164fc97ff479fecb256}{}\label{class_b_m_p_a0303cc2b3dcf6164fc97ff479fecb256}
+Rotates a 2d matrix/array by 90, 180 and 270 degrees clockwise
+
+
+\begin{DoxyParams}{Parameters}
+{\em data2D} & an vector$<$ vector$<$ R\+G\+B $>$ $>$ reference argument. \\
+\hline
+{\em degree} & an int argument. \\
+\hline
+\end{DoxyParams}
+\index{B\+MP@{B\+MP}!segment\+Generator@{segment\+Generator}}
+\index{segment\+Generator@{segment\+Generator}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{segment\+Generator(bool fetch\+Horizontal, int threshold, string fn=string())}{segmentGenerator(bool fetchHorizontal, int threshold, string fn=string())}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ B\+M\+P\+::segment\+Generator (
+\begin{DoxyParamCaption}
+\item[{bool}]{fetch\+Horizontal, }
+\item[{int}]{threshold, }
+\item[{string}]{fn = {\ttfamily string()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_ae6489ffa6e4f5054d0f79c0060a5ce5e}{}\label{class_b_m_p_ae6489ffa6e4f5054d0f79c0060a5ce5e}
+Generates only line or word segment from \hyperlink{class_b_m_p}{B\+MP} files depends on condition
+
+If fetch\+Horizontal is true then it fetch \hyperlink{class_b_m_p}{B\+MP} image left to right else top to bottom i.\+e. fetch\+Horizontal = true means line segment else word segment. Used methods\+: \hyperlink{class_b_m_p_aa9269f0d792e39faed57347394d530ee}{write\+As\+B\+M\+P()}. 
+\begin{DoxyParams}{Parameters}
+{\em fetch\+Horizontal} & an bool argument. \\
+\hline
+{\em threshold} & an int argument. \\
+\hline
+{\em fn} & an string argument, default is blank. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector$<$string$>$ 
+\end{DoxyReturn}
+writing to new \hyperlink{class_b_m_p}{B\+MP} \index{B\+MP@{B\+MP}!write\+As\+B\+MP@{write\+As\+B\+MP}}
+\index{write\+As\+B\+MP@{write\+As\+B\+MP}!B\+MP@{B\+MP}}
+\subsubsection[{\texorpdfstring{write\+As\+B\+M\+P(string out\+File\+Name, vector$<$ vector$<$ R\+G\+B $>$ $>$ data2\+D)}{writeAsBMP(string outFileName, vector< vector< RGB > > data2D)}}]{\setlength{\rightskip}{0pt plus 5cm}void B\+M\+P\+::write\+As\+B\+MP (
+\begin{DoxyParamCaption}
+\item[{string}]{out\+File\+Name, }
+\item[{vector$<$ vector$<$ {\bf R\+GB} $>$ $>$}]{data2D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_b_m_p_aa9269f0d792e39faed57347394d530ee}{}\label{class_b_m_p_aa9269f0d792e39faed57347394d530ee}
+Writes/generates new \hyperlink{class_b_m_p}{B\+MP} file from 2D array of pixel colors
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+File\+Name} & an string argument. \\
+\hline
+{\em data2D} & an vector$<$ vector$<$\+R\+G\+B$>$ $>$ argument. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a int 
+\end{DoxyReturn}
+preparing header
+
+generating new header and write to file
+
+writing pixel data
+
+sorting left to right, bottom to top 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main.\+cpp\end{DoxyCompactItemize}
